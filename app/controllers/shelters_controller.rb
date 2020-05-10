@@ -17,6 +17,7 @@ class SheltersController < ApplicationController
   end
 
   def edit
+    @shelter = Shelter.find{|shelter| shelter.id.to_s == params[:id]}
   end
 
   private

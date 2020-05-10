@@ -4,5 +4,6 @@ class PetsController < ApplicationController
   end
 
   def show
+    @pet = Pet.find(params[:id].to_i)
   end
 end

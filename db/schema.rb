@@ -15,22 +15,22 @@ ActiveRecord::Schema.define(version: 20200510174138) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "pets", force: :cascade do |t|
+  create_table "pets", id: :serial, force: :cascade do |t|
     t.string "image"
     t.string "name"
+    t.string "description"
     t.string "age"
     t.string "sex"
-    t.string "shelter_id"
+    t.boolean "status"
+    t.bigint "shelter_id"
   end
 
-  create_table "shelters", force: :cascade do |t|
+  create_table "shelters", id: :serial, force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.string "city"
     t.string "state"
     t.string "zip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

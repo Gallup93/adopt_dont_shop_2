@@ -11,7 +11,8 @@ describe "user sees a single pet" do
     visit "/pets/#{pet.id}"
 
     expect(page).to have_content(pet.name)
-    expect(page).to have_content(pet.shelter_id)
+    expect(page).to have_content(pet.age)
+    expect(page).to have_content(pet.status)
   end
 end
 

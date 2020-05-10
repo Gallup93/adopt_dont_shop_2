@@ -10,13 +10,13 @@ describe "user deletes a shelter" do
       shelter_3 = Shelter.create(name: "Dany's Racoon Sanctuary", address: "123 Easy St",
                                  city: "Guernica", state: "Confusion", zip: "11111")
 
-      visit "/shelters/#{shelter_2.id}"
+      visit "/shelters/#{shelter_3.id}"
       click_link "Delete"
 
       expect(current_path).to eq("/shelters")
       expect(page).to have_content(shelter_1.name)
-      expect(page).to_not have_content(shelter_2.name)
-      expect(page).to have_content(shelter_3.name)
+      expect(page).to have_content(shelter_2.name)
+      expect(page).to_not have_content(shelter_3.name)
     end
   end
 end

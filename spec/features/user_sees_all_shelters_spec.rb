@@ -14,8 +14,8 @@ describe "user sees all shelters" do
       visit '/shelters'
 
       expect(page).to have_content(shelter_1.name)
-      expect(page).to have_content(shelter_2.zip)
-      expect(page).to have_content(shelter_3.state)
+      expect(page).to have_content(shelter_2.name)
+      expect(page).to have_content(shelter_3.name)
     end
   end
 end

@@ -1,12 +1,14 @@
 require "rails_helper"
 
-describe "I click on the 'Update Shelter' link" do
+describe "user clicks on the 'Update Shelter' link" do
+
     it "taken to '/shelters/:id/edit' where I see a form to edit the shelter's data" do
       shelter_2 = Shelter.create(name: "Helter Shelter", address: "666 7th St",
                                  city: "Chicago", state: "Illinois", zip: "60626")
 
-      visit "/shelters/#{shelter_2.id}/edit"
-      # expect(current_path).to eq("/shelters/#{shelter_2.id}")
+      visit "/shelters/#{shelter_2.id}"
+      click_on "Update Shelter"
+      expect(current_path).to eq("/shelters/#{shelter_2.id}/edit")
       # expect(page).to have_content("Edit Shelter")
       # expect(page).to have_content(shelter_2.name)
       # click_on "Edit Shelter"

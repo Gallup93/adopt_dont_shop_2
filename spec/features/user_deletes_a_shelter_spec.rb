@@ -15,17 +15,8 @@ describe "user deletes a shelter" do
 
       expect(current_path).to eq("/shelters")
       expect(page).to have_content(shelter_1.name)
-      expect(page).to_not have_link(shelter_2.name)
+      expect(page).to_not have_content(shelter_2.name)
       expect(page).to have_content(shelter_3.name)
     end
   end
-
-# User Story 6, Shelter Delete
-# As a visitor
-# When I visit a shelter show page
-# Then I see a link to delete the shelter
-# When I click the link "Delete Shelter"
-# Then a 'DELETE' request is sent to '/shelters/:id',
-# the shelter is deleted,
-# and I am redirected to the shelter index page where I no longer see this shelter
 end

@@ -1,1 +1,14 @@
-<h1>All Pets from <%= "#{@shelter.name}" %> </h1>
+<h1>All Pets from:  <%= "#{@shelter.name}" %> </h1>
+
+<h2>TEST</h2>
+
+<ul id="pets">
+  <% @pets.each do |pet| %>
+    <h2><%= pet.name %></h2>
+      <body><%= pet.image %><br>
+      <%= pet.age %><br>
+      <%= pet.sex %><br>
+      <%= pet.shelter_id %><br>
+      </body>
+  <% end %>
+</ul>

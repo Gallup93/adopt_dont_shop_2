@@ -12,7 +12,7 @@ describe "user sees all pets of a given shelter_id" do
                                age: "6", sex: "male", shelter_id: "#{shelter_1.id}")
     pet_2 = Pet.create(image: "puppet-pic", name: "Puppet",
                                age: "5", sex: "female", shelter_id: "#{shelter_1.id}")
-    pet_2 = Pet.create(image: "turtle-pic", name: "Turtle",
+    pet_3 = Pet.create(image: "turtle-pic", name: "Turtle",
                                age: "100", sex: "female", shelter_id: "#{shelter_2.id}")
 
     visit "/shelters/#{shelter_1.id}/pets"

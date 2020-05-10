@@ -17,7 +17,8 @@ describe "user sees all pets" do
 
       expect(page).to have_content(pet_1.name)
       expect(page).to have_content(pet_2.name)
-      expect(page).to have_content(pet_3.name)
+      expect(page).to have_content(pet_1.sex)
+      expect(page).to have_content(pet_2.shelter_id)
     end
   end
 end

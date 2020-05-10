@@ -6,6 +6,18 @@ class SheltersPetsController < ApplicationController
   end
 
   def new
-    
+
+  end
+
+  def create
+    @pet= Pet.new(pet_params)
+    @pet.save
+    redirect_to "/pets"
+  end
+
+  private
+
+  def pet_params
+    params.permit(:image, :name, :description, :age, :sex)
   end
 end
